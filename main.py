@@ -21,7 +21,9 @@ class CameraUltra(App):
 
     def build(self):
         request_permissions([
-    Permission.CAMERA
+    Permission.CAMERA,
+    Permission.WRITE_EXTERNAL_STORAGE,
+    Permission.READ_EXTERNAL_STORAGE
 ])
         # Main layout components 
         self.im = imn()
