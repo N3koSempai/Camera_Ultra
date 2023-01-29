@@ -1,6 +1,6 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
-
+from android.permissions import request_permissions, Permission
 from module.image import image_man as imn
 # Import kivy UX components
 from kivy.uix.image import Image
@@ -20,6 +20,9 @@ class CameraUltra(App):
 
 
     def build(self):
+        request_permissions([
+    Permission.CAMERA
+])
         # Main layout components 
         self.im = imn()
         self.button = Button(text="capture", size_hint=(1,.1))
